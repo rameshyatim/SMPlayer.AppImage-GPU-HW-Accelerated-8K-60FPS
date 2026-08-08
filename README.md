@@ -1,10 +1,3 @@
-
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-
-</head>
-
 <body>
 
 <h1>SMPlayer AppImage — GPU HW Accelerated 8K 60FPS</h1>
