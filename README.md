@@ -5,8 +5,6 @@
 
 <img src="images/logo.svg" alt="SMPlayer AppImage Logo" width="300">
 
-<h1>SMPlayer AppImage — GPU HW Accelerated 8K 60FPS</h1>
-
 <p> <strong>A portable, hardware-accelerated SMPlayer AppImage for Linux.</strong><br> Designed around a lightweight and cooperative AppImage architecture that uses the host system's multimedia stack whenever possible while providing compatible runtime libraries inside the AppImage as a fallback. </p>
 
 </div>
