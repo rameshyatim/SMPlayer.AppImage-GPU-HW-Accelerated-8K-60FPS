@@ -3,7 +3,7 @@
 <h1>SMPlayer AppImage — GPU HW Accelerated 8K 60FPS</h1>
 <div align="center">
 
-<img src="images/logo.svg" alt="SMPlayer AppImage Logo" width="420">
+<img src="images/logo.svg" alt="SMPlayer AppImage Logo" width="300">
 
 <h1>SMPlayer AppImage — GPU HW Accelerated 8K 60FPS</h1>
 
