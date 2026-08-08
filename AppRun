@@ -1,0 +1,22 @@
+#!/bin/sh
+HERE="$(dirname "$(readlink -f "$0")")"
+export APPDIR="$HERE"
+if [ -n "$APPIMAGE" ]; then
+    APPDIR_REAL="$(dirname "$APPIMAGE")"
+    APPNAME="$(basename "$APPIMAGE")"
+    export HOME="$APPDIR_REAL/${APPNAME}.home"
+else
+    export HOME="$HERE/../SmPlayer.AppImage.home"
+fi
+mkdir -p "$HOME/.config/smplayer" "$HOME/.cache" "$HOME/.local/share"
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_DATA_HOME="$HOME/.local/share"
+export PATH="/usr/bin:/usr/local/bin:$APPDIR/usr/bin:$PATH"
+export LD_LIBRARY_PATH="/usr/lib:/usr/lib64:$APPDIR/usr/lib:$LD_LIBRARY_PATH"
+export QT_PLUGIN_PATH="/usr/lib/qt/plugins:/usr/lib64/qt/plugins:$APPDIR/usr/lib/qt/plugins"
+export XDG_DATA_DIRS="/usr/share:/usr/local/share:$APPDIR/usr/share"
+export MPLAYER_HOME="$HOME/.mplayer"
+export MPLAYER_CONFDIR="/etc/mplayer:$APPDIR/etc/mplayer"
+export VDPAU_DRIVER="va_gl"
+exec "$APPDIR/usr/bin/smplayer" "$@"
